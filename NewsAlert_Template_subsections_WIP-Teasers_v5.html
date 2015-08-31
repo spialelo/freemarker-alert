@@ -1,0 +1,408 @@
+<#assign AdCount = 0>
+
+<#--------------------- STYLE MACROS ------------------------>
+
+<#macro StyleURL>font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; color: #006699;</#macro>
+<#macro StyleHeader>font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; color: #000000</#macro>
+<#macro StyleFooter>font-size:12px; font-weight:normal; color:#666666; font-family:Arial, Helvetica, sans-serif;</#macro>
+<#macro StylePrefix>font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; color: #ff6500;</#macro>
+<#macro StyleDescription>font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; color: #000000</#macro>
+<#macro StyleRecordTitle>font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; color: #0b486c;text-decoration: none;</#macro>
+<#macro StyleMainRecordTitle>color:#006699; text-decoration:none; font-size:22px; font-weight:bold; font-family: Arial, Helvetica, sans-serif;</#macro>
+
+<#--END COMMON STYLES-->
+
+<#------------------- NEWSALERT TEMPLATE ------------------->
+
+<#macro MedPulseTemplate NewsletterName NewsletterBannerSrc NewsletterTag NewsletterCTA >
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Medscape</title>
+<style type="text/css">
+body   {width: 100%; background-color: #ffffff; margin:0; padding:0;}
+span.yshortcuts {
+	color:#06486e !important;
+	background-color:none !important;
+	border:none !important;
+}
+span.yshortcuts:hover {
+	color:#06486e !important;
+	background-color:none !important;
+	border:none !important;
+}
+span.yshortcuts:active {
+	color:#06486e !important;
+	background-color:none !important;
+	border:none !important;
+}
+span.yshortcuts:focus {
+	color:#06486e !important;
+	background-color:none !important;
+	border:none !important;
+}
+.prehead_txt {
+	display:none !important;
+	visibility:hidden;
+	opacity:0;
+	color:transparent;
+	height:0;
+	width:0;
+}
+</style>
+<style>
+.ExternalClass {
+	width:100%;
+}
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+	line-height: 100%;
+}
+.applelinks a {
+	text-decoration: none;
+	color: #333333 !important;
+}
+ @media only screen and (max-width: 480px) {
+
+.replace{
+  content:url("http://img.medscapestatic.com/pi/features/newsletters/news_alerts/mobilebanner_proxima.jpg");
+  width:100% !important;
+  height:auto !important;
+}
+.expand{
+  width:100% !important;
+
+}
+.expandbtn{
+  width:180px !important;
+  height:45px !important;
+  border-radius: 3px !important;
+  font-size:20px !important;
+
+}
+.increasertext{
+  font-size: 24px !important;
+}
+.addpadleft{
+  padding-left: 5px !important;
+}
+.increasefs{
+  font-size:16px !important
+}
+.increasenews1{
+  /*
+  font-size:20px !important;
+  font-weight:normal !important;
+  color:#990000 !important;
+  */
+}
+.increasenews2{
+  font-size:16px !important;
+}
+
+table[class="hide"], img[class="hide"], td[class="hide"] {
+	display: none !important;
+}
+td[class="padding"] {
+	width: 10px !important;
+}
+td[class="paddingtall"] {
+	height: 15px !important;
+}
+td[class="line"] {
+	width: 5px !important;
+}
+td[class="hide"] {
+	width: 0px !important;
+}
+td[class="footertext"], a[class="footertext"], font[class="footertext"] {
+	font-size: 8px !important;
+}
+td[class="specialtext"] {
+	font-size: 10px !important;
+}
+td[class="cmelink"] {
+	font-size: 12px !important;
+}
+td[class="headertext"] {
+	font-size: 20px !important;
+}
+font[class="breaking_news"] {
+	font-size:18px !important;
+}
+a[class="link"] {
+	font-size: 16px !important;
+}
+table[class="table"], td[class="cell"] {
+	width: 325px !important;
+}
+table[class="table2"], td[class="cell"] {
+	width: 100% !important;
+}
+a[class="linktitle"] {
+	font-size:22px !important;
+}
+span[class="desc"] {
+	font-size:11px !important;
+}
+}
+</style>
+</head>
+
+<body bgcolor="#ffffff" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" style="-webkit-font-smoothing: antialiased;width:100% !important;background:#ffffff;-webkit-text-size-adjust:none;">
+<span class="prehead_txt" style="display: none !important; visibility: hidden; opacity: 0; color: transparent; height: 0; width: 0;">Breaking medical news alert for %%xtmonth%% %%xtday%%, %%xtyear%%.</span>
+<table width="650" border="0" align="center" cellpadding="0" cellspacing="0" class="expand">
+  <tr>
+    <td bgcolor="#0B486C"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img class="replace" src="${NewsletterBannerSrc}" alt="${NewsletterName}" width="325" height="67" style="display:block;"></td>
+          <td><img src="http://img.medscape.com/pi/features/newsletters/news_alerts/news_alert_banner_right.jpg" width="325" height="67" style="display:block;" class="hide"></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="5" bgcolor="#005b81" class="line">&nbsp;</td>
+          <td align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="hide"><img src="http://img.medscape.com/pi/features/newsletters/news_alerts/drop_shadow.jpg" alt="" width="640" height="18" style="display:block;" class="hide"></td>
+              </tr>
+            </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="25" class="padding">&nbsp;</td>
+                <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="10" style="font-size:0px; line-height:10px;" bgcolor="#ffffff" class="paddingtall"><img style="display:block;" height="1" src="http://img.medscape.com/pi/global/ornaments/spacer.gif" width="1" border="0"></td>
+                    </tr>
+                    <tr>
+                      <td><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                          <tr>
+                            <td align="left" valign="top" style="padding-left:5px;"><font face="Arial, Helvetica, sans-serif" color="#990000" size="1" style="font-size:20px; text-decoration:none; font-weight:normal;" class="breaking_news">${NewsletterTag}</font></td>
+                            <td align="right" valign="middle" style="font-size:12px; font-weight:bold; color:#000000; font-family:Arial, Helvetica, sans-serif"><span class="applelinks">%%xtmonth%% %%xtday%%, %%xtyear%%</span></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr>
+                      <td width="100%" height="15" bgcolor="#ffffff"><img style="display:block;" height="1" src="http://img.medscape.com/pi/global/ornaments/spacer.gif" width="1" border="0"></td>
+                    </tr>
+                    
+                    
+                    <!-- MAIN BREAKING NEWS SECTION -->
+
+<#if LeadStory?exists>
+        
+         <tr>
+         <td align="left" valign="top" style="padding-left:5px;">
+          
+   <#if LeadStory.elements??> 
+  <#list LeadStory.elements as Record>  
+                  <!-- ARTICLE BEGIN-->                
+                 
+                 <a href="${Record.link?trim}" alias="News Alert: Headline" style="<@StyleMainRecordTitle/>">${Record.title?trim}</a>
+                
+              <!--OPTIONAL TEASER TEXT BEGIN-->  
+               <#if Record.displayDescription><br><font style="<@StyleDescription/>">${Record.description?trim}</font>
+             <!--OPTIONAL TEASER TEXT END-->
+             
+             <table width="10px" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="5" style="font-size: 1px; line-height: 5px;"><img style="display:block;" height="1" src="http://images.medscape.com/pi/global/ornaments/spacer.gif" width="1" border="0" alt=""></td>
+                    </tr>
+                  </table>
+
+             </#if> 
+                
+                
+                
+                  <div class="increasefs" align="left" valign="middle" style="<@StyleFooter/>">${Record.citation}</div>
+                         
+
+<table align="left" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="18" style="font-size: 1px; line-height: 18px;"><img style="display:block;" height="1" src="http://images.medscape.com/pi/global/ornaments/spacer.gif" width="1" border="0" alt=""></td>
+  </tr>
+</table>
+
+<table align="left" width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+                      <td align="left"><table class="expandbtn" width="125" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td class="hide" bgcolor="#660000" style="font-size: 1px; line-height: 3px;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td width="6" align="left" valign="top" bgcolor="#660000" style="font-size: 1px; line-height: 3px;"><img src="http://images.medscape.com/pi/features/newsletters/webmdprof/060612_drivers_blue/button-topleft.jpg" width="6" height="3" border="0" style="display:block;"></td>
+                                  <td bgcolor="#660000" style="font-size: 1px; line-height: 3px;"><img style="display:block;" height="1" alt="" src="http://images.medscape.com/pi/global/ornaments/spacer.gif" width="1" border="0"></td>
+                                  <td width="6" align="right" valign="top" bgcolor="#660000" style="font-size: 1px; line-height: 3px;"><img src="http://images.medscape.com/pi/features/newsletters/webmdprof/060612_drivers_blue/button-topright.jpg" width="6" height="3" border="0" style="display:block;"></td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                          <tr>
+                            <td class="expandbtn" height="30" align="center" valign="middle" bgcolor="#660000" style="font-family:Arial, Helvetica, sans-serif; font-size:16px;"><A href="${Record.link?trim}" style="text-decoration:none; color:#FFFFFF;" alias="cta"><b>${NewsletterCTA}&nbsp;&rsaquo;</b></A></td>
+                          </tr>
+                          <tr>
+                            <td class="hide" bgcolor="#660000" style="font-size: 1px; line-height: 3px;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td width="6" align="left" valign="bottom" bgcolor="#660000" style="font-size: 1px; line-height: 3px;"><img src="http://images.medscape.com/pi/features/newsletters/webmdprof/060612_drivers_blue/button-bottomleft.jpg" width="6" height="3" border="0" style="display:block;"></td>
+                                  <td bgcolor="#660000" style="font-size: 1px; line-height: 3px;"><img style="display:block;" height="1" alt="" src="http://images.medscape.com/pi/global/ornaments/spacer.gif" width="1" border="0"></td>
+                                  <td width="6" align="right" valign="bottom" bgcolor="#660000" style="font-size: 1px; line-height: 3px;"><img src="http://images.medscape.com/pi/features/newsletters/webmdprof/060612_drivers_blue/button-bottomright.jpg" width="6" height="3" border="0" style="display:block;"></td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+</table>
+
+
+
+<!-- ARTICLE END--></#list></#if>
+          </td></tr>
+          
+          
+  </#if>     
+          
+          
+                    
+          
+     
+                    <tr>
+                      <td height="20" bgcolor="#ffffff"><img style="display:block;" height="1" src="http://img.medscape.com/pi/global/ornaments/spacer.gif" width="1" border="0"></td>
+                    </tr>
+                    
+                    
+ <!-- MORE NEWS SECTION -->
+
+
+ <#if MoreStories?exists>
+
+
+
+    <tr>
+													<td width="100%" bgcolor="#ffffff" align="left" valign="top" style="padding-left:5px;">
+                           
+
+ <#list MoreStories.subtopics as Subsection>
+
+<span style="<@StyleHeader/>">${Subsection.name}</span>
+
+                  <table width="10px" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="5" style="font-size: 1px; line-height: 5px;"><img style="display:block;" height="1" src="http://images.medscape.com/pi/global/ornaments/spacer.gif" width="1" border="0" alt=""></td>
+                    </tr>
+                  </table>
+
+
+                 
+                                                   
+
+<#list Subsection.elements as Record>
+     <!-- ARTICLE BEGIN-->  
+<a class="increasenews2" href="${Record.link?trim}" style="color:#006699; text-decoration:none; font-size:14px; font-weight:bold; font-family: Arial, Helvetica, sans-serif;">${Record.title?trim}</a>
+
+ 
+
+   <!--OPTIONAL TEASER TEXT BEGIN-->
+                  <#if Record.displayDescription><br><font style="<@StyleDescription/>">${Record.description?trim}</font>
+                  
+                  <table width="10px" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="3" style="font-size: 1px; line-height: 3px;"><img style="display:block;" height="1" src="http://images.medscape.com/pi/global/ornaments/spacer.gif" width="1" border="0" alt=""></td>
+                    </tr>
+                  </table>
+   </#if>
+                  <!--OPTIONAL TEASER TEXT END-->
+
+
+<div align="left" style="<@StyleFooter/>">${Record.citation}</div>
+
+ <table width="10px" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="10" style="font-size: 1px; line-height: 10px;"><img style="display:block;" height="1" src="http://images.medscape.com/pi/global/ornaments/spacer.gif" width="1" border="0" alt=""></td>
+                    </tr>
+                  </table>
+          
+          </#list>
+   </#list>
+<!-- ARTICLE END-->                                                
+                                                    
+     </td></tr>
+  
+  
+
+    
+</#if>
+ 
+ 
+ 
+                    <tr>
+                      <td height="10" bgcolor="#ffffff"><img style="display:block;" height="1" src="http://img.medscape.com/pi/global/ornaments/spacer.gif" width="1" border="0"></td>
+                    </tr>
+                    
+               
+                    
+                    
+                    
+                    <tr>
+                      <td align="right" valign="top"><a href="http://www.medscape.com"><img src="http://img.medscape.com/pi/features/newsletters/news_alerts/medscape_newsalert.gif" alt="News Alert" width="135" height="30" style="display:block;"></a></td>
+                    </tr>
+                    <tr>
+                      <td height="20" bgcolor="#ffffff"><img style="display:block;" height="1" src="http://img.medscape.com/pi/global/ornaments/spacer.gif" width="1" border="0"></td>
+                    </tr>
+                  </table></td>
+                <td width="25" class="padding">&nbsp;</td>
+              </tr>
+            </table></td>
+          <td width="5" bgcolor="#005b81" class="line">&nbsp;</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td bgcolor="#005b81"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="5" style="font-size:5px; line-height:5px;" bgcolor="#075980"><img class="hide" src="http://img.medscape.com/pi/features/newsletters/redesign/newsalert/footer_left.gif" width="325" height="5" style="display:block;"></td>
+          <td height="5" style="font-size:5px; line-height:5px;" class="hide"><img src="http://img.medscape.com/pi/features/newsletters/redesign/newsalert/footer_right.gif" width="325" height="5"  style="display:block;" class="hide"></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td height="35">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><table class="addpadleft" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="20" class="hide"><img style="display:block;" height="1" src="http://img.medscape.com/pi/global/ornaments/spacer.gif" width="1" border="0" alt="" class="hide"></td>
+          <td align="left" style="FONT-SIZE: 11px; text-decoration:none; color:#333333; font-family:Arial, Helvetica, sans-serif" class="footertext"><a href="http://help.medscape.com" style="text-decoration:none; color: #333333; font-family:arial; font-size:11px;" class="footertext">Help</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="https://profreg.medscape.com/px/forgotpassword.do" style="text-decoration:none; color: #333333; font-family:arial; font-size:11px;" class="footertext">Password Assistance</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="https://profreg.medscape.com/px/profile.do?cid=med" style="text-decoration:none; color: #333333; font-family:arial; font-size:11px;" class="footertext">My Account</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="http://www.medscape.com/public/privacy" style="text-decoration:none; color: #333333; font-family:arial; font-size:11px;" class="footertext">Privacy Policy</a><br>
+            <br>
+            You are receiving this communication because you are a registered member of Medscape.<br>
+            <br>
+            The email address associated with your membership is <A href="mailto:%%EMAIL_ADDRESS%%" style="text-decoration:none; color: #333333; font-family:arial; font-size:11px;" class="footertext">%%EMAIL_ADDRESS%%</A>.<br>
+            <br>
+            <a style="text-decoration:none; color: #333333; font-family:arial; font-size:11px;" href="https://profreg.medscape.com/px/optout.do?serv=1&chan=13&info=%%EMAIL_ADDRESS%%&guid=%%ENCRYPTED_GUID%%&glob=0&prod=1038" class="footertext"> Unsubscribe from Medscape News Alerts </a><BR>
+            <br>
+            <a style="text-decoration:none; color: #333333; font-family:arial; font-size:11px;" href="https://profreg.medscape.com/px/optout.do?serv=1&chan=13&info=%%EMAIL_ADDRESS%%&guid=%%ENCRYPTED_GUID%%&glob=1&prod=1038" class="footertext">Unsubscribe from all Medscape from WebMD newsletters</a><br>
+            <BR>
+            <span class="applelinks">Medscape from WebMD<BR>
+            825 Eighth Avenue<BR>
+            New York, NY 10019</span><br>
+            <br>
+            <br></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<custom name="opencounter" type="tracking">
+
+<img src="https://pixel.inbox.exacttarget.com/pixel.gif?r=dd86db04a9d287a8ea1a0403e5a2a75ae9fae0b4&prof=%%profession%%&region=%%country%%&c=news_alert" width="1" height="1" />
+
+
+</body>
+</html>
+</#macro>
+
+<#------------------ END MEDPULSE TEMPLATE ------------------->
+
+
+

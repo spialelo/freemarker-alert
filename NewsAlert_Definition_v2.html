@@ -1,0 +1,15 @@
+<#import 'NewsAlertTemplate.ftl' as Template>
+<#import 'runtime.ftl' as content>
+<@content.SECTION section="Lead Story" name="Lead Story Section" varName="LeadStory" minOccurs="1" maxOccurs="1" />
+
+<#--SECTIONS-->
+<@content.SECTION section="Subject" name="SUBJECT" varName="subject" minOccurs="1" maxOccurs="1"/>
+<@content.SECTION section="More Stories" name="More Stories Section" varName="MoreStories" minOccurs="0" maxOccurs="5" />
+
+
+<@Template.MedPulseTemplate
+NewsletterName="News Alert"
+NewsletterBannerSrc="http://img.medscape.com/pi/features/newsletters/news_alerts/news_alert_logo.jpg"
+NewsletterTag = "BREAKING NEWS"
+NewsletterCTA = "Read Now"
+/>
